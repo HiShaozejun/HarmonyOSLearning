@@ -1,3 +1,6 @@
+
+// 应用的全局配置信息
+
 {
   "app": {
     "bundleName": "com.example.harmonyoslearning",
