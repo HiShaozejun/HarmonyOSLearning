@@ -7,9 +7,17 @@ import data from '@ohos.telephony.data';
 @Entry
 @Component
 struct Index {
+
   @State message: string = 'HarmonyOS Learning'
 
   private data: string[] = ["语法学习","其他学习"];
+
+  pushAction(index: number){
+    if (index == 0) {
+      router.pushUrl({url: "pages/ArkTsGrammar"})
+    }
+  }
+
   build() {
     Column() {
       Column() {
@@ -21,9 +29,7 @@ struct Index {
                 .width('100%').height(44).fontSize(16)
                 .textAlign(TextAlign.Center).borderRadius(10).backgroundColor(0xFFFFFF)
             }.onClick(()=> {
-              if (index == 0) {
-                router.pushUrl({url: "pages/ArkTsGrammar"})
-              }
+              this.pushAction(index)
             })
           },)
         }.width('90%')
