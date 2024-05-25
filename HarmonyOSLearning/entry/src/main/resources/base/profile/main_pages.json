@@ -1,6 +1,7 @@
 {
   "src": [
     "pages/Index",
-    "pages/ArkTsGrammar"
+    "pages/ArkTsGrammar",
+    "pages/TestPage"
   ]
 }
